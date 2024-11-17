@@ -13,8 +13,8 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: false })
 // Memutar video YouTube
 const youtubeIframe = document.getElementById('youtube');
 const videoUrl = new URL(window.location.href);
-const videoId = videoUrl.searchParams.get('id');
-youtubeIframe.src = `https://www.youtube.com/embed/${videoId}?controls=0&autoplay=1&loop=1&rel=0&modestbranding=1&cc_load_policy=3`;
+const videoId = videoUrl.searchParams.get('v');
+youtubeIframe.src = `https://www.youtube.com/embed/${videoId}?controls=1&autoplay=1&loop=1&rel=0&modestbranding=1&cc_load_policy=3`;
 
 // Fitur tambahan: Mute/Unmute webcam
 function muteUnmute() {
