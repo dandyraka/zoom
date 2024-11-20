@@ -66,3 +66,26 @@ function saveName() {
         this.parentNode.innerHTML = 'Untitled'; // Jika tidak ada nama, tetapkan ke 'Untitled'
     }
 }
+
+const videoContainers = document.querySelectorAll('.video-container');
+let currentIndex = 0; // Index elemen aktif saat ini
+
+// Fungsi untuk mengganti border
+function switchBorder() {
+    // Hapus border dari semua elemen
+    videoContainers.forEach((container) => {
+        container.style.borderColor = 'transparent'; // Hapus border
+    });
+
+    // Tambahkan border ke elemen saat ini
+    videoContainers[currentIndex].style.borderColor = '#cfe175';
+
+    // Update index untuk elemen berikutnya
+    currentIndex = (currentIndex + 1) % videoContainers.length;
+}
+
+// Jalankan fungsi setiap 2 detik
+setInterval(switchBorder, 2000);
+
+// Jalankan pertama kali agar langsung terlihat
+switchBorder();

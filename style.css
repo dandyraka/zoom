@@ -116,6 +116,10 @@
     align-items: center;
     width: 800px; /* Lebar tetap sesuai dengan keinginan */
     height: 600px; /* Tinggi tetap sesuai dengan keinginan */
+
+    border: 5px solid transparent; /* Default tanpa border */
+    border-radius: 8px; /* Opsional */
+    transition: border-color 0.3s ease; /* Efek transisi saat border berubah */
 }
 
 video, iframe {
